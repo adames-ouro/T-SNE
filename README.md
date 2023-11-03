@@ -19,16 +19,15 @@ Is a probabilistic approach based on SNE, used to project data from high dimensi
 
 - For mixed and categorical data use a distances that considers both, numerica and categorical impact, for example Gower’s distance.
 
-
 ### Formulas used:
 - **Pairwise affinities in high-dimensional space**: 
-    $$ p_{ij} = \frac{\exp(-||x_i - x_j||^2 / 2\sigma^2)}{\sum_{k \neq l} \exp(-||x_k - x_l||^2 / 2\sigma^2)} $$
+    ![Pairwise affinities high-dimensional formula](https://latex.codecogs.com/svg.latex?p_{ij}%20=%20\frac{\exp(-||x_i%20-%20x_j||^2%20/%202\sigma^2)}{\sum_{k%20\neq%20l}%20\exp(-||x_k%20-%20x_l||^2%20/%202\sigma^2))
 
 - **Pairwise affinities in low-dimensional space**: 
-    $$ q_{ij} = \frac{(1 + ||y_i - y_j||^2)^{-1}}{\sum_{k \neq l} (1 + ||y_k - y_l||^2)^{-1}} $$
+    ![Pairwise affinities low-dimensional formula](https://latex.codecogs.com/svg.latex?q_{ij}%20=%20\frac{(1%20+%20||y_i%20-%20y_j||^2)^{-1}}{\sum_{k%20\neq%20l}%20(1%20+%20||y_k%20-%20y_l||^2)^{-1})
 
 - **Cost function (Kullback-Leibler divergence)**: 
-    $$ C = \sum_{i \neq j} p_{ij} \log \frac{p_{ij}}{q_{ij}} $$
+    ![Kullback-Leibler divergence formula](https://latex.codecogs.com/svg.latex?C%20=%20\sum_{i%20\neq%20j}%20p_{ij}%20\log%20\frac{p_{ij}}{q_{ij}})
 
 ---
 
