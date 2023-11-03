@@ -19,6 +19,8 @@ Is a probabilistic approach based on SNE, used to project data from high dimensi
 
 - For mixed and categorical data use a distances that considers both, numerica and categorical impact, for example Gower’s distance.
 
+---
+
 ### Formulas used:
 - **Pairwise affinities in high-dimensional space**: 
 
