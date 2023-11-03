@@ -1,4 +1,5 @@
 # T-distributed stochastic neighbor embedding
+---
 
 ## Goal
 
@@ -17,6 +18,19 @@ Is a probabilistic approach based on SNE, used to project data from high dimensi
 - Is a randomized, stochastic, method.
 
 - For mixed and categorical data use a distances that considers both, numerica and categorical impact, for example Gower’s distance.
+
+
+### Formulas used:
+- **Pairwise affinities in high-dimensional space**: 
+    $$ p_{ij} = \frac{\exp(-||x_i - x_j||^2 / 2\sigma^2)}{\sum_{k \neq l} \exp(-||x_k - x_l||^2 / 2\sigma^2)} $$
+
+- **Pairwise affinities in low-dimensional space**: 
+    $$ q_{ij} = \frac{(1 + ||y_i - y_j||^2)^{-1}}{\sum_{k \neq l} (1 + ||y_k - y_l||^2)^{-1}} $$
+
+- **Cost function (Kullback-Leibler divergence)**: 
+    $$ C = \sum_{i \neq j} p_{ij} \log \frac{p_{ij}}{q_{ij}} $$
+
+---
 
 ## Steps for the Algorithm
 
@@ -59,3 +73,7 @@ Is a probabilistic approach based on SNE, used to project data from high dimensi
 ***Step 10: if iteration exceeds max iter parameter, stop, else keep iterating steps 6-9***
 
 - Repeat until done or stops.
+
+---
+
+> **Note:** t-SNE is computationally intensive and can be sensitive to hyperparameters. It's crucial to try different parameter values and interpret the visualizations with caution.
