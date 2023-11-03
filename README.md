@@ -21,13 +21,13 @@ Is a probabilistic approach based on SNE, used to project data from high dimensi
 
 ### Formulas used:
 - **Pairwise affinities in high-dimensional space**: 
-    ![Pairwise affinities high-dimensional formula](https://latex.codecogs.com/svg.latex?p_{ij}%20=%20\frac{\exp(-||x_i%20-%20x_j||^2%20/%202\sigma^2)}{\sum_{k%20\neq%20l}%20\exp(-||x_k%20-%20x_l||^2%20/%202\sigma^2))
+    ![Pairwise affinities high-dimensional formula](https://latex.codecogs.com/svg.latex?\color{white}p_{ij}%20=%20\frac{\exp(-||x_i%20-%20x_j||^2%20/%202\sigma^2)}{\sum_{k%20\neq%20l}%20\exp(-||x_k%20-%20x_l||^2%20/%202\sigma^2))
 
 - **Pairwise affinities in low-dimensional space**: 
-    ![Pairwise affinities low-dimensional formula](https://latex.codecogs.com/svg.latex?q_{ij}%20=%20\frac{(1%20+%20||y_i%20-%20y_j||^2)^{-1}}{\sum_{k%20\neq%20l}%20(1%20+%20||y_k%20-%20y_l||^2)^{-1})
+    ![Pairwise affinities low-dimensional formula](https://latex.codecogs.com/svg.latex?\color{white}q_{ij}%20=%20\frac{(1%20+%20||y_i%20-%20y_j||^2)^{-1}}{\sum_{k%20\neq%20l}%20(1%20+%20||y_k%20-%20y_l||^2)^{-1})
 
 - **Cost function (Kullback-Leibler divergence)**: 
-    ![Kullback-Leibler divergence formula](https://latex.codecogs.com/svg.latex?C%20=%20\sum_{i%20\neq%20j}%20p_{ij}%20\log%20\frac{p_{ij}}{q_{ij}})
+    ![Kullback-Leibler divergence formula](https://latex.codecogs.com/svg.latex?\color{white}C%20=%20\sum_{i%20\neq%20j}%20p_{ij}%20\log%20\frac{p_{ij}}{q_{ij}})
 
 ---
 
